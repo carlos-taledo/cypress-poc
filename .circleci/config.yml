@@ -1,7 +1,6 @@
 version: 2.1
 orbs:
   cypress: cypress-io/cypress@1
-  slack: circleci/slack@4.10.1
 workflows:
   e2e-tests:
     jobs:
@@ -10,25 +9,5 @@ workflows:
           requires:
             - cypress/install
           parallel: true
-          parallelism: 3
-          group: 3 machines
-          context: Slack
-          post-steps:
-            - slack/notify:
-                custom: |
-                  {
-                    "blocks": [
-                      {
-                        "type": "section",
-                        "fields": [
-                          {
-                            "type": "plain_text",
-                            "text": "*Notification for CircleCI builds*",
-                            "emoji": true
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                channel: circleci-notifications
-                event: always
+          parallelism: 10
+          group: 10 machines
