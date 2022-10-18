@@ -30,4 +30,5 @@ workflows:
                       }
                     ]
                   }
+                channel: 'C047DA4TWSD'
                 event: always
