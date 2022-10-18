@@ -23,7 +23,6 @@ jobs:
                 }
               ]
             }
-          event: always
 workflows:
   e2e-tests:
     jobs:
