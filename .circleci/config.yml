@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   cypress: cypress-io/cypress@1
-  slack: circleci/slack@4.1
+  slack: circleci/slack@4.10.1
 workflows:
   e2e-tests:
     jobs:
@@ -30,3 +30,4 @@ workflows:
                       }
                     ]
                   }
+                event: always
