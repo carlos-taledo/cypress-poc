@@ -12,9 +12,9 @@ workflows:
           parallel: true
           parallelism: 3
           group: 3 machines
+          context: Slack
           post-steps:
             - slack/notify:
-                context: Slack
                 custom: |
                   {
                     "blocks": [
