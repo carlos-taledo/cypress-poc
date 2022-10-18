@@ -30,3 +30,4 @@ workflows:
     jobs:
       - cypress/run:
           working_directory: e2e/specs
+          install-command: npm install
