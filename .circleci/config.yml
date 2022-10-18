@@ -30,3 +30,6 @@ workflows:
     jobs:
       - cypress/run:
           install-command: npm install
+          parallel: true
+          parallelism: 2
+          group: 2
