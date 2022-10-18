@@ -28,8 +28,12 @@ workflows:
       - say-hello
   e2e-tests:
     jobs:
-      - cypress/run:
-          install-command: npm install
-          parallel: true
-          parallelism: 2
-          group: 2
+      jobs:
+        - cypress/install
+        - cypress/run:
+            requires:
+              - cypress/install
+            record: true
+            parallel: true
+            parallelism: 2
+            group: 2 machines
