@@ -33,5 +33,6 @@ workflows:
           parallel: true
           parallelism: 3
           group: 3 machines
-      - notify:
-          context: Slack
+          post-steps:
+            - notify:
+                context: Slack
