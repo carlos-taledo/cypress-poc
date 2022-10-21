@@ -11,5 +11,6 @@ workflows:
           parallel: true
           parallelism: 10
           group: 10 machines
+          reports: mochawesome
       - store_test_results:
           path: mochawesome-report
