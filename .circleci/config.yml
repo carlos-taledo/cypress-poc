@@ -4,7 +4,8 @@ orbs:
 workflows:
   e2e-tests:
     jobs:
-      - cypress/install
+      - cypress/install:
+          install-command: npm install
       - cypress/run:
           requires:
             - cypress/install
