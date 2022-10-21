@@ -7,5 +7,8 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
-  reporter: 'mochawesome'
+  reporter: "junit",
+   reporterOptions: {
+      mochaFile: "cypress/results/results.xml"
+   }
 });
