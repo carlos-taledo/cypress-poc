@@ -13,5 +13,5 @@ workflows:
           parallelism: 10
           group: 10 machines
           post-steps:
-            - store_test_results:
+            - store_artifacts:
                 path: mochawesome-report
