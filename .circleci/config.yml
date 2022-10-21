@@ -7,6 +7,7 @@ workflows:
       - cypress/install:
           install-command: npm install
       - cypress/run:
+          command: npx cypress run --reporter junit
           requires:
             - cypress/install
           parallel: true
