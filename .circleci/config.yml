@@ -12,6 +12,7 @@ workflows:
           parallel: true
           parallelism: 10
           group: 10 machines
+          store_artifacts: true
           post-steps:
             - store_test_results:
                 path: cypress/results
