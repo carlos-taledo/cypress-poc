@@ -8,3 +8,7 @@ module.exports = defineConfig({
     },
   },
 });
+
+module.exports = defineConfig({
+  reporter: 'mochawesome'
+})
